@@ -25,5 +25,12 @@ def index():
 def user(name):
         return '<h1>Hello, {}!</h1>'.format(name)
 
+
+@app.route('/d3')
+def d3():
+    return render_template("d3.html", login=False)
+    
+    
+    
 if __name__ == "__main__":
         app.run(host="0.0.0.0", port=5000, debug=False)
