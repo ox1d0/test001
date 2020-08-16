@@ -17,6 +17,6 @@
 ########## DEFINE FILES AND VARIABLES HERE #########
 ####################################################
 set -e
-$(nginx && cd flask002/ && flask run)
+nginx && cd flask002/ && flask run
 #find . -name 'runner.sh' | xargs bash
 exec "$@"
