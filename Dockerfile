@@ -1,5 +1,5 @@
-#FROM continuumio/miniconda3
-FROM tiangolo/uwsgi-nginx-flask
+#FROM tiangolo/uwsgi-nginx-flask
+FROM continuumio/miniconda3
 COPY flask002/ ./flask002
 RUN apt-get update && apt-get install net-tools procps netcat nmap tcpdump curl build-essential python3-dev python3 emacs-nox uwsgi libpcre3 libffi-dev nginx -y
 RUN pip install --upgrade pip && pip install -r ./flask002/requirements.txt && rm -v /etc/nginx/nginx.conf && mkdir /etc/nginx/logs
