@@ -7,7 +7,7 @@ RUN pip install --upgrade pip && pip install -r ./flask002/requirements.txt && r
 #ADD testlog_1/ /testlog_1
 #ADD uwsgi.ini ./uwsgi.ini
 ADD nginx.conf /etc/nginx/nginx.conf
-ADD runner.sh /runner.sh
+#ADD runner.sh /runner.sh
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 # Create a runner script for the entrypoint
 COPY entrypoint.sh /entrypoint.sh
