@@ -3,7 +3,7 @@ This Is The Fixed Version Of
 4DockerImages001 : 
 https://github.com/ox1d0/4DockerImages001
 
-ON 4DockerImages001 is need to complete the uwsgi setup. This one is Production Funtional due were did some changes:
+ON 4DockerImages001 is needed to complete the uwsgi setup. This one is  a Production Functional demo due where did some changes:
 
 For nginx.conf in order to use nginx only as reversed proxy  were changed :
 
