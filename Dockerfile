@@ -3,9 +3,8 @@ FROM continuumio/miniconda3
 COPY flask002/ ./flask002
 RUN apt-get update && apt-get install net-tools procps netcat nmap tcpdump curl build-essential python3-dev python3 emacs-nox uwsgi libpcre3 libffi-dev nginx -y
 RUN pip install --upgrade pip && pip install -r ./flask002/requirements.txt && rm -v /etc/nginx/nginx.conf && mkdir /etc/nginx/logs
-#ADD NginexAuto001/ /NginexAuto001
-#ADD testlog_1/ /testlog_1
-#ADD uwsgi.ini ./uwsgi.ini
+ADD testlog_1/ /testlog_1
+ADD testlog_2  /testlog_2
 ADD nginx.conf /etc/nginx/nginx.conf
 #ADD runner.sh /runner.sh
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
