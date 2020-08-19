@@ -1,0 +1,10 @@
+# This is a basic workflow to help you get started with Actions
+name: Your CICD Pipeline Name
+on: [push]
+jobs:
+  myjob:
+    runs-on: Nexus001.4TheLulz
+    steps:
+    - uses: actions/checkout@v2
+    - name: Auto Deploy On GCP - Getting the images from registry
+      run: uname -a && hostname -f && bash /home/ox1d0/4Brightcove001/4DockerImages001/AutoDeployOnGCP001.bash
