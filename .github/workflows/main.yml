@@ -3,7 +3,7 @@ name: Your CICD Pipeline Name
 on: [push]
 jobs:
   myjob:
-    runs-on: Nexus001_testRunner
+    runs-on: Nexus001
     steps:
     - uses: actions/checkout@v2
     - name: Auto Deploy On GCP - Getting the images from registry
