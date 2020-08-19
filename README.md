@@ -1,7 +1,23 @@
 # test001
-This Is The Fixed Version Of :
-
+This Is The Fixed Version Of 
+4DockerImages001 : 
 https://github.com/ox1d0/4DockerImages001
+
+ON 4DockerImages001 is need to complete the uwsgi setup. This one is Production Funtional due were did some changes:
+
+For nginx.conf in order to use nginx only as reversed proxy  were changed :
+
+include uwsgi_params;     
+uwsgi_pass 127.0.0.1:9090; 	
+
+intent  were added :
+
+	 proxy_pass http://127.0.0.1:5000;
+	 proxy_set_header Host "localhost";
+
+In this way the request asked on 80 port would be routed to 127.0.0.0.1:5000 which is the Flask rest service.
+
+workaround to the uwsgi setup. 
 
 -------------------OLD--Readme--------------
 
